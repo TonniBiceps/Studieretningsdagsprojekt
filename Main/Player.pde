@@ -10,6 +10,9 @@ class Player {
   float maxSpeed;
   float currentSpeed;
   float acceleration;
+  
+  //MapId
+  int mapID = 0;
  
   void Update() {
     //Opdater position etc

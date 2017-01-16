@@ -1,16 +1,20 @@
 class System {
+  Player player;
   //Width, height, blokkens størrelse
   int w = 800;
   int h = 400;
   PVector gravity;
-  Map map;
-    
+  ArrayList<Map> maps = new ArrayList<Map>();
+
   System() {
-    this.map = new Map(this);
+    for (int i = 0; i > 1; i++) {
+    }
   }
-  
+
   void Update() {
-    for (Block b: map.blocks) {
+    Map map = maps.get(player.mapID);
+    
+    for (Block b : map.blocks) {
       b.Update();
     }
   }
