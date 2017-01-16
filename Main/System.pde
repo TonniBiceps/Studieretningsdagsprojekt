@@ -21,11 +21,15 @@ class System {
 
   void Update() {     
     Map map = maps.get(player.mapID);
-    
+        player.map = map;
+        
     for (Block b : map.blocks) {
       b.Update();
     }
     
+    if (map.quiz != null) {
+      map.quiz.Update();      
+    }
     player.Update();
   }
 }

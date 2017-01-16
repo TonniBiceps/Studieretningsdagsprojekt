@@ -3,11 +3,12 @@ class Map {
   color background = color(71);
   System system;
   ArrayList<Block> blocks = new ArrayList<Block>();
+  Quiz quiz;
 
   Map(System system) {
     this.system = system;
   }
-
+  
   void fromFile(String filename) {
     BufferedReader reader;
     String line;
@@ -32,6 +33,11 @@ class Map {
           switch(ch) {
           case '1':
             blocks.add(new Block("1", new PVector(x, y)));
+            quiz = null;
+            break;
+          case '2':
+            blocks.add(new Block("2", new PVector(x, y)));
+            quiz = new Quiz(system, 1);
             break;
           }
           ++cX;

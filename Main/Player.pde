@@ -1,5 +1,7 @@
 class Player {
 
+  Map map;
+
   //Position
   PVector pos = new PVector(0, 0);
 
@@ -24,6 +26,7 @@ class Player {
       pos.x += currentSpeed;
     }
     if (keys[2]) {
+      checkBlock();
     }
     if (keys[3]) {
     }
@@ -43,4 +46,17 @@ class Player {
     handleMovement();
   }
 
+  void checkBlock() {
+    for (Block b : map.blocks) {
+      if (b.doors.hasValue(b.bType)) {
+        if (dist(pos.x, pos.y, b.bPos.x, b.bPos.y) < 50) {
+          if (mapID == b.mapID) {
+            mapID = 0;
+          } else {
+            mapID = b.mapID;
+          }
+        }
+      }
+    }
+  }
 }
