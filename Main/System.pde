@@ -1,4 +1,5 @@
 class System {
+  int mapCount = 2;
   Player player;
   //Width, height, blokkens størrelse
   int w = 800;
@@ -7,7 +8,13 @@ class System {
   ArrayList<Map> maps = new ArrayList<Map>();
 
   System() {
-    for (int i = 0; i > 1; i++) {
+    this.player = new Player();    
+    
+    for (int i = 0; i < mapCount; i++) {
+      Map map = new Map(this);
+      
+      maps.add(map);
+      map.fromFile("map" + i + ".txt");
     }
   }
 

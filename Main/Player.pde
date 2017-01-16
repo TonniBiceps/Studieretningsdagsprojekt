@@ -12,7 +12,7 @@ class Player {
   float acceleration;
   
   //MapId
-  int mapID = 0;
+  int mapID = 1;
  
   void Update() {
     //Opdater position etc

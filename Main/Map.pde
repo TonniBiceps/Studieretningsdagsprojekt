@@ -3,11 +3,9 @@ class Map {
   color background = color(71);
   System system;
   ArrayList<Block> blocks = new ArrayList<Block>();
-  
-  Map(System system){
+
+  Map(System system) {
     this.system = system;
-    
-    fromFile("map.txt");
   }
 
   void fromFile(String filename) {
@@ -32,9 +30,9 @@ class Map {
           float x = cX*bSize;
           float y = cY*bSize;
           switch(ch) {
-            case '1':
-              blocks.add(new Block("1", new PVector(x, y)));
-              break;
+          case '1':
+            blocks.add(new Block("1", new PVector(x, y)));
+            break;
           }
           ++cX;
         }
