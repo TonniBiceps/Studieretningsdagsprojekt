@@ -12,9 +12,6 @@ class Player {
   float maxSpeed;
   float acceleration;
  
-  
-  
-  
   void Update() {
     //Opdater position etc
   }
