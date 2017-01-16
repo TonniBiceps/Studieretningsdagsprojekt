@@ -1,11 +1,9 @@
 class Player {
   
   //Position
-  float xPos;
-  float yPos;
+  PVector pos;
   
   //Vertikal bevægelse
-  float gravity;
   float jumpSpeed;
   
   //Horisontal bevægelse
