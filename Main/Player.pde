@@ -13,7 +13,7 @@ class Player {
   float currentSpeed = 10;
   PVector acceleration = new PVector(0.75, 0);
 
-  boolean keys[] = new boolean [5];
+  boolean keys[] = new boolean [8];
 
   //MapId
   int mapID = 0;

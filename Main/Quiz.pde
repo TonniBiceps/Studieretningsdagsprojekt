@@ -29,11 +29,12 @@ class Quiz {
       options.append("Sikkerhedskopiering og virus");
       options.append("Kontrol af brugeradgang, PW og VPN.");
       break;
-    case 5 :
-      question = "Hvilket sprog er prossesing primært baseret på?";
-      options.append("Java");
-      options.append("Python");
-      options.append("Spansk");
+    case 4 :
+      beskrivelse = "I teknologi vil du arbejde med forskellige projekter. Du vil få et overordnet emne, hvor du skal lave et produkt og en rapport. Her er der fokus på produktet og dets kreativitet, og hvordan det kan hjælpe til med at forbedre verden eller samfundet.";
+      question = "Hvilke værksteder er tilknyttet faget teknologi?";
+      options.append("Tekstil, Industriel design, el og process");
+      options.append("Industriel Design, fysik/kemi, el og sundhed og livstil");
+      options.append("IT, Industriel design, process og Sundhed og livstil");
       break;
     }
   }
@@ -63,5 +64,21 @@ class Quiz {
     text("Tryk '2': " + options.get(1), width/2, 175);
     text("Tryk '3': " + options.get(2), width/2, 200);
     popStyle();
+
+    if (system.player.keys[4]) {
+      pushStyle();
+      fill(0, 255, 0);
+      textSize(50);
+      textAlign(CENTER);
+      text("KORREKT", width/2, 300);
+      popStyle();
+    } else if (system.player.keys[5] || system.player.keys[6]) {
+      pushStyle();
+      fill(255, 0, 0);
+      textSize(50);
+      textAlign(CENTER);
+      text("FORKERT", width/2, 300);
+      popStyle();
+    }
   }
 }
