@@ -8,8 +8,8 @@ class Player {
 
   //Horisontal bevægelse
   float maxSpeed = 10;
-  float currentSpeed = 0;
-  PVector acceleration = new PVector(2, 0);
+  float currentSpeed = 10;
+  PVector acceleration = new PVector(0.75, 0);
 
   boolean keys[] = new boolean [5];
 
@@ -18,12 +18,10 @@ class Player {
 
   void handleMovement() {
     if (keys[0]) {
-      pos.x = pos.x - currentSpeed;
-      Accelerate();
+      pos.x -= currentSpeed;
     }
     if (keys[1]) {
-      pos.x = pos.x + currentSpeed;
-      Accelerate();
+      pos.x += currentSpeed;
     }
     if (keys[2]) {
     }
@@ -39,24 +37,10 @@ class Player {
     pushStyle();
     fill(255, 150, 0);
     noStroke();
-    rect(pos.x, pos.y, 25, 25);
+    rect(pos.x, pos.y, 50, 50);
     popStyle();
-    
+
     handleMovement();
-    Deaccelerate();
   }
 
-  void Accelerate() {
-
-    if (abs(currentSpeed) < maxSpeed) {
-      currentSpeed += acceleration.x;
-    }
-  }
-
-  void Deaccelerate() {
-
-    if (abs(currentSpeed) > 0) {
-      currentSpeed -= acceleration.x * 0.5;
-    }
-  }
 }

@@ -8,7 +8,8 @@ class System {
   ArrayList<Map> maps = new ArrayList<Map>();
 
   System() {
-    this.player = new Player();    
+    this.player = new Player();
+    this.player.pos.y = h - 50;
     
     for (int i = 0; i < mapCount; i++) {
       Map map = new Map(this);

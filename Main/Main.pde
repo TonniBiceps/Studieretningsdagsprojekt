@@ -8,7 +8,7 @@ void setup() {
 
 void draw() {
   background(71);
-  system.Update();  
+  system.Update();
 }
 
 
@@ -20,8 +20,9 @@ void keyPressed() {
 }
 
 void keyReleased() {
-  if (key == 'w')        system.player.keys[0] = false;
-  if (key == 's')        system.player.keys[1] = false;
-  if (key == 'a')        system.player.keys[2] = false;
-  if (key == 'd')        system.player.keys[3] = false;
+  if (key == 'a')        system.player.keys[0] = false;
+  if (key == 'd')        system.player.keys[1] = false;
+  if (key == 'w')        system.player.keys[2] = false;
+  if (key == 's')        system.player.keys[3] = false;
+  
 }
