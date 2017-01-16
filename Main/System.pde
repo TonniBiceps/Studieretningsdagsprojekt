@@ -11,7 +11,7 @@ class System {
   
   void Update() {
     for (Block b: map.blocks) {
-      rect(b.bPos.x, b.bPos.y, b.bSize, b.bSize);
+      b.Update();
     }
   }
 }
