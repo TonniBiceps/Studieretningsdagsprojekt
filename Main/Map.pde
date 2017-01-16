@@ -6,6 +6,8 @@ class Map {
   
   Map(System system){
     this.system = system;
+    
+    fromFile("map.txt");
   }
 
   void fromFile(String filename) {
