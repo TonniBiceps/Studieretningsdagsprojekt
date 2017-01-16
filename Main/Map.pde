@@ -4,7 +4,8 @@ class Map {
   System system;
   ArrayList<Block> blocks = new ArrayList<Block>();
   
-  Map(){
+  Map(System system){
+    this.system = system;
   }
 
   void fromFile(String filename) {

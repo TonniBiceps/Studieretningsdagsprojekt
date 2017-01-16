@@ -6,7 +6,7 @@ class Block {
   PVector bPos;
   
   Block(String bType, PVector bPos){
-    bType = this.bType;
-    bPos = this.bPos;
+    this.bType = bType;
+    this.bPos = bPos;
   }
 }
