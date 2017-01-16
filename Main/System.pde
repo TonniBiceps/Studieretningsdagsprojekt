@@ -18,11 +18,13 @@ class System {
     }
   }
 
-  void Update() {
+  void Update() {     
     Map map = maps.get(player.mapID);
     
     for (Block b : map.blocks) {
       b.Update();
     }
+    
+    player.Update();
   }
 }
